@@ -1,22 +1,28 @@
+//declare api key and base as constants
 const api = {
     key: "2c931dacd44278418a80b71cf093ac78",
     base: "https://api.openweathermap.org/data/2.5/"
 }
 
-// 2c931dacd44278418a80b71cf093ac78
-// 28fd15358cdecbc1a1dfef367e71acef
+//declare search and btn class as constant
 const search = document.querySelector(".search");
 const btn = document.querySelector(".btn");
+
+//adding Event Listener to the button 
 btn.addEventListener("click", getInput);
 
+//disallow refresh/reload after submit
 function getInput (event) {
     event.preventDefault();
     if (event.type == "click") {
         getData(search.value);
+        
+        //testing to see the result in our browser inspect element=>console
         console.log(search.value);
     }
 }
 
+//api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 function getData () {
     fetch(`${api.base}weather?q=${search.value}&units=metric&appid=${api.key}`)
         .then(response => {
@@ -25,8 +31,9 @@ function getData () {
         
 }
 
+//getting a valid response from the text box
 function displayData (response) {
-    // console.log(response);
+    // conditions
     if (response.cod === "404") {
         const error = document.querySelector(".error");
         error.textContent = "Please enter a valid city";
