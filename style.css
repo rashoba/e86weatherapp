@@ -1,9 +1,11 @@
+/*Doing a default CSS setting for margin, padding and border with *star */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*Styling the body with the most essential CSS Property a web should have: background, font-family, width, height, display, justify-content, align-items. */
 body {
     background: linear-gradient(to right bottom, #aeaab3, #9e071b);
     font-family: Arial, sans-serif;
@@ -14,11 +16,13 @@ body {
     align-items: center;
 }
 
+/*Styling the container class */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
+/*Styling the main-container class */
 .main-container {
     display: flex;
     justify-content: center;
@@ -35,6 +39,7 @@ body {
 
 }
 
+/*The ::before selector inserts something before the content of each selected element(s) */
 .main-container::before {
     content: "";
     position: absolute;
@@ -49,6 +54,7 @@ body {
     
 }
 
+/*Styling the container-top class excluding everything in the <section> tag: */
 .top {
     text-align: center;
     z-index: 999;
@@ -108,6 +114,8 @@ body {
     font-size: 14px;
 }
 
+
+/*Styling the icon, location and current class*/
 .icon {
     text-align: center;
     padding-top: 15px;
@@ -142,6 +150,16 @@ body {
     height: 1px;
     background-color: white;
 }
+
+
+/*
+That means the selector div > p.some_class only matches paragraphs of .some_class
+that are nested directly inside a div, and not any paragraphs that are nested 
+further within. This implies that every element matching div > p.some_class 
+necessarily also matches div p.some_class, with the descendant combinator (space),
+so the two are understandably often confused. – from stackoverflow. Meaning it’s 
+same as .current{}
+*/
 
 .current > * {
     padding-bottom: 10px;
