@@ -63,6 +63,8 @@ function displayData (response) {
     }
 }
 
+//date function declaration
+
 function dateFunction (d) {
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -71,6 +73,8 @@ function dateFunction (d) {
     let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
+
+//getting the date result
 
     return `${day}, ${date} ${month} ${year}`;
 }
