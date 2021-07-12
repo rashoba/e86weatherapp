@@ -4,4 +4,5 @@ This is a sample weather application using OpenWeathermap API.
 
 # Description
 
-Feel free to try out yourself and enjoy! 🐣
+- It is designed with HTML and CSS (For front-end)
+- Vanilla JavaScript for the Backend
